@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<p id="qid">This script is not working.</p>
+<script type="text/javascript">
+/*<![CDATA[*/
+/**/  function randomString(length) {      
+var seed = "0123456789abcdefghijklmnopqrstuvwxyz";      
+var result = "";      
+for (var i = length; i > 0; --i) result += seed[Math.round(Math.random() * (seed.length - 1))];      
+return result;  }  
+document.getElementById("qid").innerText = "Question ID: " + randomString(16);  
+/**/
+/*]]>*/
+</script>
+</body>
+</html>
