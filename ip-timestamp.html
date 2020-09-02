@@ -1,12 +1,24 @@
 <html>
-<head></head>
-<body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto;">
-<p id="ipaddress" style="overflow: visible; white-space: nowrap;">IP address should be displayed here.</p>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$.getJSON("https://api.ipify.org?format=json", function (data) {
+$("#info").html("" + data.ip + "");
+})
+</script>
 
-  <script type="application/javascript">
-  function getIP(json) {
-    document.getElementById("ipaddress").innerHTML = "Your IP Address is " + json.ip;
-  }
+<script>
+  var curDate = new Date();
+  var localDate = curDate.toLocaleDateString('en-US', { day: 'numeric', month: 'numeric', year: 'numeric' });
+  var localTime = curDate.toLocaleTimeString('en-GB', { hour12: false });
+</script>
+</head>
+<body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto;">
+
+<span id="info" style="overflow: visible; white-space: nowrap;"></span> <span id="time" style="overflow: visible; white-space: nowrap;"></span>
+
+<script>
+document.getElementById("time").innerHTML = localDate + " " + localTime;
 </script>
 <script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
 </body>
