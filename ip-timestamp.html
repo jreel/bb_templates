@@ -2,10 +2,12 @@
 <head></head>
 <body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto;">
 <p id="ipaddress" style="overflow: visible; white-space: nowrap;">IP address should be displayed here.</p>
-<script type="text/javascript">
-string ip = Request.UserHostAddress;
-string hostname = Request.UserHostName;
-document.getElementById("ipaddress").innerHTML = "Your IP Address is " + ip;
+
+  <script type="application/javascript">
+  function getIP(json) {
+    document.getElementById("ipaddress").innerHTML = "Your IP Address is " + json.ip;
+  }
 </script>
+<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script>
 </body>
 </html>
