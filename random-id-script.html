@@ -1,14 +1,14 @@
 <html>
 <head></head>
 <body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto;">
-<p id="qid" style="overflow: visible; white-space: nowrap;">This script is not working.</p>
+<p id="qid" style="overflow: visible; white-space: nowrap;">Question ID: r8och8xiq2jf</p>
 <script type="text/javascript">
 /*<![CDATA[*/
 /**/  
 function randomString(length) {      
-var seed = "0123456789abcdefghijklmnopqrstuvwxyz";      
+var seed = "0123456789abcdefghijklmnopqrstuvwxyz0123456789";
 var result = "";      
-for (var i = length; i > 0; --i) result += seed[Math.round(Math.random() * (seed.length - 1))];      
+for (var i = length; i > 0; --i) result += seed[Math.round(Math.random() * (seed.length - 1))];
 return result;  
 }  
 document.getElementById("qid").innerText = "Question ID: " + randomString(16);  
