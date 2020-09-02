@@ -13,14 +13,14 @@ $("#info").html("" + data.ip + "");
   var localTime = curDate.toLocaleTimeString('en-GB', { hour12: false });
 </script>
 </head>
-<body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto; color: #e0e0e0;">
-
+<body style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: auto; color: #e0e0e0; font-size: 20px; font-weight: bold;">
+<div id="container" style="margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto; overflow: visible; white-space: nowrap;">
 <p id="watermark1" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">EXAM Question, Copyright 2020</p>
 <p id="watermark2" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">DO NOT copy, photograph, or share!</p>
 <p id="watermark3" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">Violators WILL face consequences!</p>
-<p id="info" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">Your IP address and timestamp</p>
-<p id="time" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">are being recorded.</p>
-
+<span id="info" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">Your IP address is recorded,</span> 
+<span id="time" style="overflow: visible; white-space: nowrap; margin: 0 0 0 0; padding: 0 0 0 0; height: auto; width: auto;">along with the current time.</span>
+</div>
 <script>
 document.getElementById("time").innerHTML = localDate + " " + localTime;
 </script>
