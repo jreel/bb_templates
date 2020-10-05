@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  color: #c00000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#container {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+.tile {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+span {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  white-space: nowrap;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var ipInfo;
+$.getJSON("https://api.ipify.org?format=json", function (data) {
+ipInfo = data.ip;
+$("#info").html("" + ipInfo + "");
+})
+</script>
+
+<script>
+  var curDate = new Date();
+  var localDate = curDate.toLocaleDateString('en-US', { day: 'numeric', month: 'numeric', year: 'numeric' });
+  var localTime = curDate.toLocaleTimeString('en-GB', { hour12: false });
+</script>
+</head>
+<body>
+<div id="container">
+
+<div id="repeated" class="tile">
+<span id="watermark1">This EXAM is Copyright &copy; 2020 by J. Reel at Wake Technical Community College.<br /></span>
+<span id="watermark2">DO NOT copy, photograph, or share any part of this Exam! Violators WILL face consequences! <br /></span>
+<span id="info">Your IP address is being recorded, </span> 
+<span id="time">along with the current time. </span>
+</div>
+
+</div>
+
+<script>
+document.getElementById("time").innerHTML = localDate + "&nbsp;" + localTime + "&nbsp;";
+</script>
+</body>
+</html>
